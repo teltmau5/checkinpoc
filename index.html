@@ -1,4 +1,4 @@
-<h2 id="hello">Hello world34</h2>
+<h2 id="hello">Hello world35</h2>
 
 <h3 id="hello2"></h3>
 
@@ -21,4 +21,8 @@
   function qrCodeReceived(str) {
     document.getElementById("hello2").innerText = str;
   }
+  
+  setTimeout(() => {
+    window.location.hash = "#my-new-hash";
+  }, 5000);
 </script>
