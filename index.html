@@ -28,6 +28,7 @@
   
   
   function qrCodeReceived(str) {
+    if(!str) str = "No input received!";
     document.getElementById("hello2").innerText = str;
   }
   
