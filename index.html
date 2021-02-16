@@ -1,7 +1,13 @@
-<h2 id="hello">Hello world2</h2>
+<h2 id="hello">Hello world3</h2>
 
 <script>
-  function newKey(str) {
-    document.getElementById("hello").innerText = str;
+  function newTagIdReceived(tagIdBytes) {
+    
+    var u8array = new Uint8Array(tagIdBytes); // -1
+    u8array.reverse()
+    var view = new DataView(u8array.buffer)
+    var result = view.getUint32();
+    
+    document.getElementById("hello").innerText = result;
   }
 </script>
